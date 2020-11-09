@@ -14,6 +14,6 @@ server:
     accesslog:
       enabled: true
       directory: logs
-      prefix: access
+      prefix: access_
       suffix: .log
       file-date-format: yyyy-MM-dd
