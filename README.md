@@ -22,7 +22,7 @@ Libraries being used:
 - [commons-io](https://commons.apache.org/proper/commons-io/)
 
 # Special Thanks
-In addition to libraries (and their docs) that's being used for this tempalte, I'd like to thanks guys in these sites as well for their helpful guides:
+In addition to libraries (and their docs) that's being used for this tempalte, I'd like to give my gratitude to the people behind these sites for their post(s):
 - https://stackoverflow.com
 - https://thepracticaldeveloper.com
 - https://restfulapi.net
