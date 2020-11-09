@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * This implementation was inspired by this this post
- * @see
- * <a href="https://thepracticaldeveloper.com/custom-error-handling-rest-controllers-spring-boot/#customize-errorcontroller-to-avoid-html-whitelabel-error-pages">
- *   https://thepracticaldeveloper.com
+ *
+ * @see <a href="https://thepracticaldeveloper.com/custom-error-handling-rest-controllers-spring-boot/#customize-errorcontroller-to-avoid-html-whitelabel-error-pages">
+ * https://thepracticaldeveloper.com
  * </a>
  */
 @RestController

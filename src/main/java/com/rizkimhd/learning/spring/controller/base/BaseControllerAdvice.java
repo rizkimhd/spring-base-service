@@ -1,7 +1,7 @@
 package com.rizkimhd.learning.spring.controller.base;
 
-import com.rizkimhd.learning.spring.exception.MandatoryFieldException;
 import com.rizkimhd.learning.spring.exception.InvalidSpecException;
+import com.rizkimhd.learning.spring.exception.MandatoryFieldException;
 import com.rizkimhd.learning.spring.util.RestControllerUtil;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
