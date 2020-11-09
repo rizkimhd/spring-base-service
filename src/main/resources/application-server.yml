@@ -1,0 +1,19 @@
+server:
+  port: 9000
+  connection-timeout: 15s
+  error:
+    path: /error
+    whitelabel:
+      enabled: false
+  compression:
+    enabled: true
+  tomcat:
+    basedir: tomcat
+    max-threads: 200
+    max-swallow-size: 2MB
+    accesslog:
+      enabled: true
+      directory: logs
+      prefix: access
+      suffix: .log
+      file-date-format: yyyy-MM-dd
