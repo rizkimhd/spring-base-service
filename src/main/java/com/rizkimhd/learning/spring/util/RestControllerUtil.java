@@ -1,9 +1,9 @@
 package com.rizkimhd.learning.spring.util;
 
+import com.rizkimhd.learning.spring.controller.base.BaseError;
 import com.rizkimhd.learning.spring.controller.base.BaseMetadata;
 import com.rizkimhd.learning.spring.controller.base.BaseRequest;
 import com.rizkimhd.learning.spring.controller.base.BaseResponse;
-import com.rizkimhd.learning.spring.controller.base.BaseError;
 import java.util.Date;
 import java.util.Map;
 import lombok.experimental.UtilityClass;

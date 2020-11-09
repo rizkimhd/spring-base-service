@@ -2,10 +2,10 @@ package com.rizkimhd.learning.spring.controller;
 
 import com.rizkimhd.learning.spring.controller.base.BaseRequest;
 import com.rizkimhd.learning.spring.controller.base.BaseResponse;
-import com.rizkimhd.learning.spring.controller.spec.HelloSpecValidator;
-import com.rizkimhd.learning.spring.exception.ErrorCode;
 import com.rizkimhd.learning.spring.controller.spec.HelloRequest;
 import com.rizkimhd.learning.spring.controller.spec.HelloResponse;
+import com.rizkimhd.learning.spring.controller.spec.HelloSpecValidator;
+import com.rizkimhd.learning.spring.exception.ErrorCode;
 import com.rizkimhd.learning.spring.service.HelloService;
 import com.rizkimhd.learning.spring.util.ErrorCodeUtil;
 import com.rizkimhd.learning.spring.util.RestControllerUtil;
@@ -58,9 +58,8 @@ public class HelloController {
    *
    * @return use RequestMethod.PUT when you'd like to update a singular resource
    *
-   * @see
-   * <a href="https://restfulapi.net/rest-put-vs-post>
-   *   https://restfulapi.net
+   * @see <a href="https://restfulapi.net/rest-put-vs-post>
+   * https://restfulapi.net
    * </a>
    */
   @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
@@ -81,9 +80,8 @@ public class HelloController {
    *
    * @return use RequestMethod.PATCH when you'd like to update a part of the resource
    *
-   * @see
-   * <a href="https://restfulapi.net/rest-put-vs-post>
-   *   https://restfulapi.net
+   * @see <a href="https://restfulapi.net/rest-put-vs-post>
+   * https://restfulapi.net
    * </a>
    */
   @PatchMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
