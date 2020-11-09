@@ -49,7 +49,7 @@ public class RestControllerUtil {
     return constructResponse(apiVersion, endpoint, request).withData(response);
   }
 
-  public static BaseRequest ConstructGetRequest(Map queries) {
+  public static BaseRequest constructRequestQueries(Map queries) {
     return BaseRequest.builder()
         .queries(queries)
         .timestamp(new Date())

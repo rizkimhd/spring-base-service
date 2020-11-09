@@ -34,6 +34,7 @@ dependencies {
 	implementation (
 		'commons-io:commons-io:2.8.0',
 		'org.apache.commons:commons-lang3:3.11',
+		'org.springdoc:springdoc-openapi-ui:1.4.8',
 		'org.springframework.boot:spring-boot-starter',
 		'org.springframework.boot:spring-boot-starter-web'
 	)

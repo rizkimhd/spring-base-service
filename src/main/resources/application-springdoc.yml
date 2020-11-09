@@ -1,0 +1,16 @@
+springdoc:
+  paths-to-exclude: /error
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+  api-docs:
+    enabled: true
+    path: /api-docs
+    groups:
+      enabled: true
+  group-configs[0]:
+    group: API v1
+    paths-to-match: /api/v1/**
+  group-configs[1]:
+    group: API v2
+    paths-to-match: /api/v2/**
