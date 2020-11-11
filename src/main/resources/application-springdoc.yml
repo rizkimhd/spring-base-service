@@ -14,3 +14,13 @@ springdoc:
   group-configs[1]:
     group: API v2
     paths-to-match: /api/v2/**
+
+---
+spring:
+  profiles: prod
+
+springdoc:
+  swagger-ui:
+    enabled: false
+  api-docs:
+    enabled: false

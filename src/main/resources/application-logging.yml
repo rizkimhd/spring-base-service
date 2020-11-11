@@ -1,5 +1,21 @@
 logging:
   file: logs/application.log
+  pattern:
+    dateformat: yyyy-MM-dd HH:mm:ss.SSS
+    rolling-file-name: ${LOG_FILE}_%d{yyyy-MM-dd}.%i.gz
+  level:
+    com.rizkimhd.learning.spring: DEBUG
   http:
     request: true
-    response: false
+    response: true
+
+---
+spring:
+  profiles: prod
+
+logging:
+  level:
+    com.rizkimhd.learning.spring: INFO
+  http:
+    request: true
+    response: true
