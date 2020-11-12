@@ -6,35 +6,53 @@ plugins {
 
 group = 'com.rizkimhd.learning.spring'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
-targetCompatibility = '11'
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
 
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
 	}
+
+	developmentOnly
+
+	runtimeClasspath {
+		extendsFrom developmentOnly
+	}
+
 }
 
 repositories {
 	mavenCentral()
+	jcenter()
+	mavenLocal()
+}
+
+ext {
+	lombokVersion = '1.18.16'
+	apacheIoVersion = '2.8.0'
+	apacheLangVersion = '3.11'
+	springDocOpenApiVersion = '1.4.8'
 }
 
 dependencies {
 
 	annotationProcessor (
-		'org.projectlombok:lombok'
+		"org.projectlombok:lombok:$lombokVersion"
 	)
 
 	compileOnly (
-		'org.projectlombok:lombok'
+		"org.projectlombok:lombok:$lombokVersion"
 	)
 	
-//	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	developmentOnly (
+		'org.springframework.boot:spring-boot-devtools'
+	)
 
 	implementation (
-		'commons-io:commons-io:2.8.0',
-		'org.apache.commons:commons-lang3:3.11',
-		'org.springdoc:springdoc-openapi-ui:1.4.8',
+		"commons-io:commons-io:$apacheIoVersion",
+		"org.apache.commons:commons-lang3:$apacheLangVersion",
+		"org.springdoc:springdoc-openapi-ui:$springDocOpenApiVersion",
 		'org.springframework.boot:spring-boot-starter',
 		'org.springframework.boot:spring-boot-starter-web'
 	)
