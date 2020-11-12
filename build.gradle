@@ -28,6 +28,10 @@ repositories {
 	mavenLocal()
 }
 
+wrapper {
+	distributionType = Wrapper.DistributionType.BIN
+}
+
 ext {
 	lombokVersion = '1.18.16'
 	apacheIoVersion = '2.8.0'
