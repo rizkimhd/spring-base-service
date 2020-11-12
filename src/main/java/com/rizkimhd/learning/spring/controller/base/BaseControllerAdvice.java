@@ -45,7 +45,7 @@ public class BaseControllerAdvice {
         .reason(e.getErrorCode())
         .message(
             String.format("%s '%s' has not been implemented",
-            StringUtils.capitalize(e.getResourceKey()), e.getEndpoint()))
+                StringUtils.capitalize(e.getResourceKey()), e.getEndpoint()))
         .build();
 
     return RestControllerUtil.constructErrorResponse(e.getApiVersion(), e.getEndpoint(), e.getRequest(), error);

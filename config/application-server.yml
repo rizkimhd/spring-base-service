@@ -4,7 +4,7 @@ server:
   error:
     path: /error
     whitelabel:
-      enabled: false
+      enabled: true
   compression:
     enabled: true
   tomcat:

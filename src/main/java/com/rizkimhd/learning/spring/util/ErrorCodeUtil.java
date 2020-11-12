@@ -6,7 +6,6 @@ import com.rizkimhd.learning.spring.exception.InvalidSpecException;
 import com.rizkimhd.learning.spring.exception.MandatoryFieldException;
 import com.rizkimhd.learning.spring.exception.NotImplementedException;
 import lombok.experimental.UtilityClass;
-import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 
 @UtilityClass
