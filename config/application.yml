@@ -4,3 +4,6 @@ spring:
       - server
       - logging
       - springdoc
+      - i18n
+  config:
+    location: ./config

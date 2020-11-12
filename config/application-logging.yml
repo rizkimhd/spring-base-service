@@ -5,6 +5,7 @@ logging:
     rolling-file-name: ${LOG_FILE}_%d{yyyy-MM-dd}.%i.gz
   level:
     com.rizkimhd.learning.spring: DEBUG
+    org.springframework.web.servlet.i18n: DEBUG
   http:
     request: true
     response: true

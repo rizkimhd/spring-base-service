@@ -7,8 +7,11 @@ import com.rizkimhd.learning.spring.controller.base.BaseResponse;
 import java.util.Date;
 import java.util.Map;
 import lombok.experimental.UtilityClass;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.context.i18n.LocaleContextHolder;
 
+@Slf4j
 @UtilityClass
 public class RestControllerUtil {
 
@@ -30,9 +33,20 @@ public class RestControllerUtil {
         );
   }
 
+  private double detectApiVersion(String endpoint) {
+    try {
+      return StringUtils.isBlank(endpoint.split("/")[2]) ?
+             0D : Double.parseDouble(endpoint.split("/")[2].substring(1));
+    } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
+      log.error("Failed to determine API version from endpoint '{}' with ERR {}", endpoint, e.getMessage());
+      return 0D;
+    }
+  }
+
   public static BaseResponse constructErrorResponse(String endpoint,
                                                     BaseError error) {
-    return constructErrorResponse(0D, endpoint, null, error);
+
+    return constructErrorResponse(detectApiVersion(endpoint), endpoint, null, error);
   }
 
   public static BaseResponse constructErrorResponse(double apiVersion,

@@ -12,6 +12,7 @@ import com.rizkimhd.learning.spring.util.RestControllerUtil;
 import java.util.Map;
 import org.apache.commons.lang3.tuple.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,6 +34,9 @@ public class HelloControllerV1 implements HelloController {
 
   @Autowired
   HelloService helloService;
+
+  @Autowired
+  MessageSource messageSource;
 
   @GetMapping
   public BaseResponse<HelloResponse> getHello(
@@ -70,7 +74,7 @@ public class HelloControllerV1 implements HelloController {
     return constructResult(
         request,
         helloService.hello(request.getSpec())
-            .withGreeting("Hi")
+            .withGreeting("putHello")
             .withName(String.format("%s | %s", request.getSpec().getName(), request.getSpec().getName()))
     );
   }
@@ -91,7 +95,7 @@ public class HelloControllerV1 implements HelloController {
 
     return constructResult(
         request,
-        helloService.hello(request.getSpec()).withGreeting("Hi")
+        helloService.hello(request.getSpec()).withGreeting("patchHello")
     );
   }
 

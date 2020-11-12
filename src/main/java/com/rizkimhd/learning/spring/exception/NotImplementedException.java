@@ -2,11 +2,10 @@ package com.rizkimhd.learning.spring.exception;
 
 import com.rizkimhd.learning.spring.controller.base.BaseRequest;
 import lombok.Getter;
-import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 
 @Getter
-public class NotImplementedException extends BaseException  {
+public class NotImplementedException extends BaseException {
 
   String resourceKey;
   String resourceId;

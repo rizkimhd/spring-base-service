@@ -5,6 +5,7 @@ import com.rizkimhd.learning.spring.util.RestControllerUtil;
 import java.util.Collections;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.web.servlet.error.AbstractErrorController;
 import org.springframework.boot.web.servlet.error.ErrorAttributes;
 import org.springframework.http.HttpStatus;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
  * https://thepracticaldeveloper.com
  * </a>
  */
+@Slf4j
 @RestController
 @RequestMapping(value = BaseErrorController.ERROR_PATH, produces = MediaType.APPLICATION_JSON_VALUE)
 public class BaseErrorController extends AbstractErrorController {
