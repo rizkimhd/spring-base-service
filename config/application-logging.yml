@@ -5,10 +5,10 @@ logging:
     rolling-file-name: ${LOG_FILE}_%d{yyyy-MM-dd}.%i.gz
   level:
     com.rizkimhd.learning.spring: DEBUG
-    org.springframework.web.servlet.i18n: DEBUG
+    web: DEBUG
   http:
     request: true
-    response: false
+    response: true
 ---
 spring:
   profiles: prod
@@ -16,6 +16,7 @@ spring:
 logging:
   level:
     com.rizkimhd.learning.spring: INFO
+    web: INFO
   http:
-    request: true
+    request: false
     response: false
