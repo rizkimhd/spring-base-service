@@ -8,8 +8,7 @@ logging:
     org.springframework.web.servlet.i18n: DEBUG
   http:
     request: true
-    response: true
-
+    response: false
 ---
 spring:
   profiles: prod
@@ -19,4 +18,4 @@ logging:
     com.rizkimhd.learning.spring: INFO
   http:
     request: true
-    response: true
+    response: false
