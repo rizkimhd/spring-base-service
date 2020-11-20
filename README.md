@@ -1,6 +1,13 @@
 # Spring Base Service
 This repostiory will act as a template for [Spring-based](https://spring.io/) Service
 
+## Features
+- Automatic API Documentation
+- Consistent Error Response
+- i18n and l10n through Locale Detection and Resource Files
+- Externalized Application Configuration
+- Profile-based Configuration
+
 ## Spring Libraries
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - [Spring Web](https://spring.io/guides/gs/spring-boot/)
