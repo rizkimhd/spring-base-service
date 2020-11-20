@@ -32,6 +32,7 @@ Annotations being used:
 - [@Builder](https://projectlombok.org/features/Builder)
 - [@Getter](https://projectlombok.org/features/GetterSetter)
 - [@AllArgsConstructor](https://projectlombok.org/features/constructor)
+- [@NoArgsConstructor](https://projectlombok.org/features/constructor)
 - [@Slf4j](https://projectlombok.org/features/log)
 - [@With](https://projectlombok.org/features/With)
 - [@UtilityClass](https://projectlombok.org/features/experimental/UtilityClass)
