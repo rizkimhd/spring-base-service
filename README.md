@@ -7,6 +7,7 @@ This repostiory will act as a template for [Spring-based](https://spring.io/) Se
 - i18n and l10n through Locale Detection and Resource Files
 - Externalized Application Configuration
 - Profile-based Configuration
+- Return non-200 HTTP Status when there is an error
 
 ## Spring Libraries
 - [Spring Boot](https://spring.io/projects/spring-boot)
