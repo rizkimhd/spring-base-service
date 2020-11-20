@@ -53,3 +53,7 @@ In addition to libraries (and their docs) that's being used for this tempalte, I
 - https://thepracticaldeveloper.com
 - https://restfulapi.net
 - https://restapitutorial.com
+
+## Contributors
+- [Rz](https://github.com/rizkimhd)
+- [Shawn Lim](https://github.com/geekyme)

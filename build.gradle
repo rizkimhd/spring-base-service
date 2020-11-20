@@ -36,7 +36,7 @@ ext {
 	lombokVersion = '1.18.16'
 	apacheIoVersion = '2.8.0'
 	apacheLangVersion = '3.11'
-	springDocOpenApiVersion = '1.4.8'
+	springDocOpenApiVersion = '1.5.0'
 }
 
 dependencies {

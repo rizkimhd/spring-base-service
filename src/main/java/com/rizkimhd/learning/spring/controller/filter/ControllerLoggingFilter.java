@@ -36,6 +36,12 @@ public class ControllerLoggingFilter implements Filter {
   @Value("${logging.http.response}")
   boolean responseLoggingEnabled;
 
+  @Value("${springdoc.swagger-ui.path}")
+  String swaggerPath;
+
+  @Value("${springdoc.api-docs.path}")
+  String openApiPath;
+
   @Override
   public void doFilter(ServletRequest request, ServletResponse response,
                        FilterChain chain) throws IOException, ServletException {
@@ -46,14 +52,18 @@ public class ControllerLoggingFilter implements Filter {
     BufferedRequestWrapper bufferedRequest = new BufferedRequestWrapper((HttpServletRequest) request);
     BufferedResponseWrapper bufferedResponse = new BufferedResponseWrapper((HttpServletResponse) response);
 
-    if (requestLoggingEnabled) {
-      logRequest(requestId, bufferedRequest);
-    }
+    if (isExcluded(bufferedRequest.getServletPath())) {
+      chain.doFilter(bufferedRequest, bufferedResponse);
+    } else {
+      if (requestLoggingEnabled) {
+        logRequest(requestId, bufferedRequest);
+      }
 
-    chain.doFilter(bufferedRequest, bufferedResponse);
+      chain.doFilter(bufferedRequest, bufferedResponse);
 
-    if (responseLoggingEnabled) {
-      logResponse(requestId, bufferedResponse);
+      if (responseLoggingEnabled) {
+        logResponse(requestId, bufferedResponse);
+      }
     }
 
     long endTimeInMs = new Date().getTime();
@@ -95,6 +105,11 @@ public class ControllerLoggingFilter implements Filter {
       typesafeRequestMap.put(requestParamName, requestParamValue);
     }
     return typesafeRequestMap;
+  }
+
+  private boolean isExcluded(String path) {
+    return path.toLowerCase().contains(swaggerPath.toLowerCase().split("\\.")[0])
+        || path.toLowerCase().contains(openApiPath.toLowerCase());
   }
 
 }
