@@ -5,6 +5,7 @@ import com.rizkimhd.learning.spring.controller.base.BaseMetadata;
 import com.rizkimhd.learning.spring.controller.base.BaseRequest;
 import com.rizkimhd.learning.spring.controller.base.BaseResponse;
 import java.util.Date;
+import java.util.Locale;
 import java.util.Map;
 import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
@@ -25,7 +26,7 @@ public class RestControllerUtil {
     return constructResponse(request)
         .withMetadata(
             BaseMetadata.builder()
-                .locale(LocaleContextHolder.getLocale())
+                .locale(LocaleContextHolder.getLocale().toLanguageTag())
                 .endpoint(endpoint)
                 .apiVersion(apiVersion)
                 .timestamp(new Date())
