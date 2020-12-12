@@ -11,7 +11,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class BaseMetadata {
   double apiVersion;
   String endpoint;
-  Locale locale;
+  String locale;
 
   @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
   Date timestamp;
